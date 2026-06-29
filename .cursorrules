@@ -1,0 +1,12 @@
+# 專案技術棧
+- 前端：React 18 + Vite + TypeScript
+- 樣式：Tailwind CSS (禁止使用 CSS modules 或 inline styles)
+- 路由：react-router-dom (強制使用 HashRouter)
+- 後端/DB：Supabase + pgvector
+- AI：Gemini 1.5 Flash (透過 Supabase Edge Functions 呼叫)
+
+# 開發原則
+1. 型別安全：所有 API 請求與資料傳遞必須匯入 `src/types/index.ts` 的介面。
+2. 元件化：單一元件超過 150 行請主動拆分。
+3. 繁體中文：所有註解與 UI 文本預設使用繁體中文。
+4. 禁止事項：絕對不能在前端暴露 Gemini API Key。
