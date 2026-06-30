@@ -69,7 +69,7 @@ export const QuoteResult: React.FC<QuoteResultProps> = ({ data, onReset }) => {
           </div>
           
           <div className="text-6xl sm:text-[5.5rem] font-medium tracking-tighter leading-none mb-3">
-            <span className="text-4xl text-[#E57E52] mr-2">$</span>
+            <span className="text-4xl text-[#E57E52] mr-2">NT$</span>
             {suggested_price.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
           </div>
           
@@ -110,23 +110,23 @@ export const QuoteResult: React.FC<QuoteResultProps> = ({ data, onReset }) => {
           
           {/* 左側膠囊 (Costs) */}
           <div className="col-span-2 lg:col-span-3 bg-[#E57E52] rounded-4xl p-6 flex flex-col justify-between min-h-[220px]">
-            <div className="text-[#171312] text-xs font-bold uppercase tracking-widest">material</div>
+            <div className="text-[#171312] text-xs font-bold uppercase tracking-widest">材料成本 (material)</div>
             <div className="text-[#171312] text-4xl sm:text-5xl font-medium tracking-tighter">
-              ${cost_breakdown.material.toLocaleString()}
+              NT${cost_breakdown.material.toLocaleString()}
             </div>
           </div>
           
           <div className="col-span-2 lg:col-span-3 bg-[#EBB362] rounded-4xl p-6 flex flex-col justify-between min-h-[220px]">
-            <div className="text-[#171312] text-xs font-bold uppercase tracking-widest">machining</div>
+            <div className="text-[#171312] text-xs font-bold uppercase tracking-widest">加工成本 (machining)</div>
             <div className="text-[#171312] text-4xl sm:text-5xl font-medium tracking-tighter">
-              ${cost_breakdown.machining.toLocaleString()}
+              NT${cost_breakdown.machining.toLocaleString()}
             </div>
           </div>
 
           <div className="col-span-2 md:col-span-4 lg:col-span-3 bg-[#171312] rounded-4xl p-6 flex flex-col justify-between min-h-[220px]">
-            <div className="text-[#A89680] text-xs font-bold uppercase tracking-widest">outsourcing</div>
+            <div className="text-[#A89680] text-xs font-bold uppercase tracking-widest">外包成本 (outsourcing)</div>
             <div className="text-[#f1ead9] text-4xl sm:text-5xl font-medium tracking-tighter">
-              ${cost_breakdown.outsourcing.toLocaleString()}
+              NT${cost_breakdown.outsourcing.toLocaleString()}
             </div>
           </div>
 
@@ -160,7 +160,7 @@ export const QuoteResult: React.FC<QuoteResultProps> = ({ data, onReset }) => {
                  <div key={c.id} className="bg-[#f1ead9] px-4 py-2 rounded-full text-[#171312] text-sm font-bold flex items-center gap-2">
                    <span>ID_{i+1}</span>
                    <span className="opacity-50">/</span>
-                   <span>${c.unit_price}</span>
+                   <span>NT${c.unit_price}</span>
                  </div>
                ))}
             </div>
